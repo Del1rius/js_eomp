@@ -36,6 +36,7 @@
 
 a {
     color: #BD2C2C !important;
+    font-weight: bold !important;
 }
 
 .navbar-toggler {
@@ -63,7 +64,7 @@ h3 {
 }
 
 footer {
-    color: #BD2C2C !important;
+    color: white !important;
 }
 
 h4 {

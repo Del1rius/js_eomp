@@ -1,0 +1,37 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important; 
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.logo {
+    width: 100px !important;
+    justify-content: start !important;
+}
+
+.backgrounds {
+    background-image: url(https://imageup.me/images/12133088-7cda-4cf7-80cf-357cd5b7866f.webp);
+    height: 100vh;
+    background-position: fixed;
+    background-repeat: no-repeat;
+   object-fit: cover;
+   background-size: 100%;
+    
+}
+
+a {
+    color: #BD2C2C !important;
+    font-weight: bold !important;
+}
+
+.navbar-toggler {
+    background-color: #BD2C2C !important;
+    border-radius: 10px !important;
+}
+
+footer {
+    color: white;
+}

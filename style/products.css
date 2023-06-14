@@ -1,0 +1,23 @@
+body {
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #b82e1f 74%);  
+}
+
+a {
+    color: #BD2C2C !important;
+}
+
+.btn-cart {
+    background-color: black !important;
+    color: #BD2C2C !important;
+    padding: 10px !important;
+    border: 2px solid white !important;
+    border-radius: 20px !important;
+}
+
+.btn-cart:hover {
+    background-color: #BD2C2C !important;
+    color: black !important;
+    border: 2px solid white !important;
+    border-radius: 20px !important;
+}

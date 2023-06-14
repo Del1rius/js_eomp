@@ -23,7 +23,7 @@ featuredProducts.forEach((item) => {
   dispProducts.innerHTML += `
 
         <div class="card col-3 bg-black text-white border-white border-2 p-2 text-center">
-        <img src="${item.img}" style="height: 500px">
+        <img src="${item.img}" style="height: 400px">
         <h4 class="fs-4">${item.name}</h4>
         <div class="card-body">
         <p class="text-white fs-6">${item.desc}</p>      
@@ -31,5 +31,6 @@ featuredProducts.forEach((item) => {
         </div>
         </div>`;
 });
+
 
     

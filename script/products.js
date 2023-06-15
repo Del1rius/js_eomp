@@ -96,6 +96,7 @@ function updateCart() {
   cart.forEach((product) => {
     const cartItem = document.createElement("div");
     cartItem.innerHTML = `
+      <button onclick="delItem(${product.id})" class="close-btn">X</button>
       <span>${product.name}</span>
       <span>€${product.price}</span>
     `;
@@ -108,15 +109,16 @@ displayProducts();
 function setItems() {
   const cartContainer = document.getElementById("cart-container");
   localStorage.setItem("data", JSON.stringify(cart));
-  console.log(cart);
 }
 
 function showTask() {
   const cartContainer = document.getElementById("cart-container");
   cart.forEach((item) => {
     cartContainer.innerHTML += `
+        <button onclick="delItem(${item.id})" class="close-btn">X</button> 
         <span>${item.name}</span>
         <span>€${item.price}</span></br>
+        
       `;
   });
 }
@@ -127,9 +129,18 @@ function calculateTotal() {
   let totalElement = document.getElementById("total");
   let total = 0;
   cart.forEach((item) => {
-    total += eval(item.price);
+    total += parseFloat(item.price);
   });
   totalElement.textContent = `€${total}`;
 }
 
 calculateTotal();
+
+function delItem(productId) {
+  const index = cart.findIndex((product) => product.id === productId);
+  if (index > -1) {
+    cart.splice(index, 1);
+    updateCart();
+    setItems();
+  }
+}

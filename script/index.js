@@ -22,7 +22,7 @@ let dispProducts = document.getElementById("products");
 featuredProducts.forEach((item) => {
   dispProducts.innerHTML += `
 
-        <div class="card col-3 bg-black text-white border-white border-2 p-2 text-center">
+        <div class="card col-12 col-sm-6 col-md-4 col-lg-3 bg-black text-white border-white border-2 p-2 text-center">
         <img src="${item.img}" style="height: 400px">
         <h4 class="fs-4">${item.name}</h4>
         <div class="card-body">

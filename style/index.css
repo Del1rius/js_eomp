@@ -50,3 +50,9 @@ h4 {
     color: #BD2C2C !important;
 }
 
+li a:hover {
+    background-color: #BD2C2C !important;
+    color: white !important;
+
+}
+

@@ -21,3 +21,9 @@ a {
     border: 2px solid white !important;
     border-radius: 20px !important;
 }
+
+li a:hover {
+    background-color: #BD2C2C !important;
+    color: white !important;
+
+}

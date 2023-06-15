@@ -69,7 +69,7 @@ function displayProducts() {
       <div class="card-body">
       <p class="text-white fs-6">${product.desc}</p>    
       <p class="text-white fs-4">€${product.price}</p>  
-      <button type="button" class="productBtn btn btn-black text-white text-center border-white p-2 mt-2 mb-2 border-3" onclick="addToCart(${product.id})">Add to Cart</button>
+      <button type="button" class="productBtn text-white text-center border-white p-2 mt-2 mb-2 border-3" onclick="addToCart(${product.id})">Add to Cart</button>
       </div>
       </div>`;
     ourProducts.appendChild(productElement);

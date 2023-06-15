@@ -52,3 +52,17 @@ li a:hover {
     border: 2px solid white !important;
     border-radius: 10px !important;
 }
+
+.productBtn {
+    background-color: black !important;
+    color: #BD2C2C !important;
+    border: 2px solid white !important;
+    border-radius: 10px !important;
+}
+
+.productBtn:hover {
+    background-color: #BD2C2C !important;
+    color: White !important;
+    border: 2px solid white !important;
+    border-radius: 10px !important;
+}

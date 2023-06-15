@@ -144,3 +144,27 @@ function delItem(productId) {
     setItems();
   }
 }
+
+function displayAdmin() {
+  const ourProducts = document.getElementById("admin");
+  ourProducts.innerHTML = "";
+
+  const hardware = JSON.parse(localStorage.getItem("data")) || [];
+
+  hardware.forEach((product) => {
+    const productElement = document.createElement("tr");
+    productElement.innerHTML = `
+        <td>${product.id}</td>
+        <td>${product.name}</td>
+        <td>${product.desc}</td>
+        <td>€${product.price}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" onclick="editProduct(${product.id})">Edit</button>
+          <button class="btn btn-danger btn-sm" onclick="deleteProduct(${product.id})">Delete</button>
+        </td>
+      `;
+    ourProducts.appendChild(productElement);
+  });
+}
+
+displayAdmin();

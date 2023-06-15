@@ -139,3 +139,7 @@ function deleteProduct(productId) {
 }
 
 displayProducts();
+
+function sort() {
+    hardware.sort()
+}

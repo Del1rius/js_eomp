@@ -1,54 +1,60 @@
 let hardware = [
   {
     id: 1,
-    img: "https://i.postimg.cc/wxC1q6tH/hardware.webp",
-    name: "ESL x Razer Headset BlackShark V2",
+    img: "https://i.postimg.cc/c4j7Rq5L/kits.webp",
+    name: "Cloud9 ESPORTS 2023 Pro Jersey",
     desc: "random description of the product",
-    price: "130",
+    price: "70",
   },
   {
     id: 2,
-    img: "https://i.postimg.cc/J7PW0jKY/hardware1.webp",
-    name: "ESL x Razer Keyboard Huntsman V2",
-    desc: "random description of the product",
-    price: "190",
-  },
-  {
-    id: 3,
-    img: "https://i.postimg.cc/NjLNDH6M/hardware2.webp",
-    name: "ESL x Razer Mouse Viper V2",
-    desc: "random description of the product",
-    price: "110",
-  },
-  {
-    id: 4,
-    img: "https://i.postimg.cc/G2w894gL/g2.webp",
-    name: "G2 ESPORTS 2023 Pro Jersey",
-    desc: "random description of the product",
-    price: "60",
-  },
-  {
-    id: 5,
     img: "https://i.postimg.cc/SR4mWkkp/vitality.webp",
     name: "Team Vitality 2023 Pro Jersey",
     desc: "random description of the product",
     price: "60",
   },
   {
-    id: 6,
+    id: 3,
     img: "https://i.postimg.cc/HLHGZ3FQ/heroic.webp",
     name: "Heroic 2023 Pro Jersey",
     desc: "random description of the product",
     price: "70",
   },
   {
-    id: 7,
-    img: "https://i.postimg.cc/pdT6m7jX/faze.webp",
-    name: "FaZe Clan 2023 Pro Jersey",
+    id: 4,
+    img: "https://i.postimg.cc/8kF8tgWL/navi.png",
+    name: "Natus Vincere 2023 Pro Jersey",
     desc: "random description of the product",
     price: "69",
   },
-
+  {
+    id: 5,
+    img: "https://i.postimg.cc/wxC1q6tH/hardware.webp",
+    name: "ESL x Razer Headset BlackShark V2",
+    desc: "random description of the product",
+    price: "130",
+  },
+  {
+    id: 6,
+    img: "https://i.postimg.cc/J7PW0jKY/hardware1.webp",
+    name: "ESL x Razer Keyboard Huntsman V2",
+    desc: "random description of the product",
+    price: "190",
+  },
+  {
+    id: 7,
+    img: "https://i.postimg.cc/NjLNDH6M/hardware2.webp",
+    name: "ESL x Razer Mouse Viper V2",
+    desc: "random description of the product",
+    price: "110",
+  },
+  {
+    id: 8,
+    img: "https://i.postimg.cc/kg8TLdH3/hardware3.webp",
+    name: "ESL x Razer MousePad",
+    desc: "random description of the product",
+    price: "40",
+  },
 ];
 
 function displayProducts() {
@@ -57,7 +63,7 @@ function displayProducts() {
     const productElement = document.createElement("div");
     productElement.classList += 'col-12 col-sm-6 col-md-4 col-lg-3'
     productElement.innerHTML = `
-      <div class="card bg-black text-white border-white border-2 p-2 text-center">
+      <div class="card bg-black text-white border-white border-2 p-2 text-center mt-3 mb-3">
       <img src="${product.img}" style="height: 400px>
       <h4 class="fs-4">${product.name}</h4>
       <div class="card-body">
@@ -116,3 +122,14 @@ function showTask() {
 }
 
 showTask();
+
+function calculateTotal() {
+  let totalElement = document.getElementById("total");
+  let total = 0;
+  cart.forEach((item) => {
+    total += eval(item.price);
+  });
+  totalElement.textContent = `€${total}`;
+}
+
+calculateTotal();

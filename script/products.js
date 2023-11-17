@@ -87,6 +87,7 @@ function addToCart(productId) {
     updateCart();
   }
   setItems();
+  calculateTotal();
 }
 
 function updateCart() {
@@ -102,6 +103,7 @@ function updateCart() {
     `;
     cartContainer.appendChild(cartItem);
   });
+  calculateTotal();
 }
 
 displayProducts();
